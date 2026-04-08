@@ -6,7 +6,7 @@ const productData = [
         title: "Anime Illustration",
         price: "Start from Rp 150.000",
         features: ["Full Color", "Simple Background", "1 Character", "Bust up / Halfbody / Fullbody"],
-        image: "../assets/images/anime_ilustrasi/2.PNG",
+        image: "../assets/images/anime_ilustrasi/2.png",
         delay: 0
     },
     {
