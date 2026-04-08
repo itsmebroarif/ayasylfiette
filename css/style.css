@@ -1,0 +1,75 @@
+/* =========================
+   MOBILE RESPONSIVE FIX
+   ========================= */
+
+/* HERO TEXT */
+@media (max-width: 640px) {
+    #home h1 {
+        font-size: 2.5rem !important;
+        line-height: 1.2;
+    }
+
+    #home p {
+        font-size: 0.95rem !important;
+        padding: 0 10px;
+    }
+}
+
+/* SECTION SPACING */
+@media (max-width: 768px) {
+    section {
+        padding-top: 4rem !important;
+        padding-bottom: 4rem !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+}
+
+/* ABOUT IMAGE */
+@media (max-width: 768px) {
+    #about img {
+        height: 300px !important;
+    }
+}
+
+/* GRID PRODUCT */
+@media (max-width: 768px) {
+    #product-container {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* GALLERY FIX */
+@media (max-width: 640px) {
+    #gallery .columns-1,
+    #gallery .columns-2,
+    #gallery .columns-3 {
+        column-count: 1 !important;
+    }
+}
+
+/* VERTICAL TEXT (HIDE ON MOBILE) */
+@media (max-width: 768px) {
+    .text-vertical {
+        display: none !important;
+    }
+}
+
+/* PARALLAX FIX MOBILE */
+@media (max-width: 768px) {
+    .parallax-bg {
+        background-attachment: scroll !important;
+    }
+}
+
+/* FORM FIX */
+@media (max-width: 640px) {
+    input, textarea, select {
+        font-size: 14px !important;
+    }
+}
+
+/* NAVBAR MOBILE MENU */
+#mobileMenu {
+    transition: all 0.3s ease;
+}

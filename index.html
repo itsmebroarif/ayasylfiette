@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayasylfiette | Commission & VTuber Assets</title>
+
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Outfit:wght@300;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        :root {
+            --accent: #f472b6;
+            /* Sakura Pink */
+            --dark: #0f172a;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        .font-jp {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+
+        /* Preloader */
+        #preloader {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: var(--dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.8s ease, visibility 0.8s;
+        }
+
+        .glitch-text {
+            font-size: 3rem;
+            font-weight: 900;
+            color: white;
+            letter-spacing: 0.5rem;
+            position: relative;
+            text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+                -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+                0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+            animation: glitch 1s infinite alternate-reverse;
+        }
+
+        @keyframes glitch {
+            0% {
+                text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75), -0.05em -0.025em 0 rgba(0, 255, 0, 0.75), -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+            }
+
+            14% {
+                text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75), -0.05em -0.025em 0 rgba(0, 255, 0, 0.75), -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+            }
+
+            15% {
+                text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75), 0.025em 0.025em 0 rgba(0, 255, 0, 0.75), -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+            }
+
+            49% {
+                text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75), 0.025em 0.025em 0 rgba(0, 255, 0, 0.75), -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+            }
+
+            50% {
+                text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75), 0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+            }
+
+            99% {
+                text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75), 0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+            }
+
+            100% {
+                text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75), -0.025em -0.025em 0 rgba(0, 255, 0, 0.75), -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+            }
+        }
+
+        /* Parallax Background */
+        .parallax-bg {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.8)), url('assets/jumbotron-alt.png');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Vertical Japanese Text Decorative */
+        .text-vertical {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+
+        /* Halftone/Grid pattern for Anime Aesthetic */
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, #e2e8f0 1px, transparent 1px),
+                linear-gradient(to bottom, #e2e8f0 1px, transparent 1px);
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden text-slate-800 bg-grid relative">
+
+    <div id="preloader">
+        <div class="glitch-text uppercase tracking-widest">Loading</div>
+        <div class="absolute bottom-10 text-white font-jp text-sm tracking-widest">ロード中...</div>
+    </div>
+
+    <div
+        class="fixed left-4 top-1/4 text-vertical text-slate-300 font-jp text-6xl font-black opacity-30 -z-10 select-none">
+        イラストレーション
+    </div>
+    <div
+        class="fixed right-4 bottom-1/4 text-vertical text-slate-300 font-jp text-6xl font-black opacity-30 -z-10 select-none">
+        クリエイター
+    </div>
+
+    <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b-2 border-pink-400">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-black tracking-tighter flex items-center gap-2">
+                <span class="text-pink-500">A</span>YASYLFIETTE.
+            </a>
+            <div class="hidden lg:flex space-x-6 font-bold text-sm tracking-widest uppercase items-center">
+                <a href="#home" class="hover:text-pink-500 transition">Home</a>
+                <a href="#about" class="hover:text-pink-500 transition">About</a>
+                <a href="#product" class="hover:text-pink-500 transition">Product</a>
+                <a href="#gallery" class="hover:text-pink-500 transition">Gallery</a>
+                <a href="#faq" class="hover:text-pink-500 transition">FAQ</a>
+                <a href="https://vgen.co/AYA030" target="_blank"
+                    class="bg-slate-900 text-white px-5 py-2 rounded hover:bg-pink-500 transition flex items-center gap-2 transform hover:-translate-y-1">
+                    <i class="fa-solid fa-cart-shopping"></i> VGen Store
+                </a>
+            </div>
+            <button class="lg:hidden text-2xl"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <section id="home"
+        class="parallax-bg min-h-screen flex items-center justify-center pt-20 px-6 relative overflow-hidden">
+        <div class="text-center text-white z-10" data-aos="fade-up" data-aos-duration="1200">
+            <p class="font-jp text-pink-400 font-bold tracking-widest mb-4">へようこそ — Welcome To</p>
+            <h1 class="text-6xl md:text-8xl font-black uppercase mb-6 leading-none tracking-tighter">
+                Ayasylfiette <br> <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-500">Studio</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-10 font-light">
+                Mewujudkan imajinasimu ke dalam visual yang menakjubkan. Melayani ilustrasi, pembuatan aset VTuber,
+                hingga karakter Furry.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#product"
+                    class="px-8 py-4 bg-pink-500 text-white font-bold text-lg hover:bg-pink-600 transition-all skew-x-[-10deg] inline-block hover:scale-105 shadow-[8px_8px_0px_rgba(0,0,0,0.5)]">
+                    <div class="skew-x-[10deg]">LIHAT JASA <i class="fa-solid fa-arrow-right ml-2"></i></div>
+                </a>
+                <a href="https://vgen.co/AYA030" target="_blank"
+                    class="px-8 py-4 bg-white text-slate-900 font-bold text-lg hover:bg-slate-200 transition-all skew-x-[-10deg] inline-block hover:scale-105 shadow-[8px_8px_0px_rgba(244,114,182,0.8)] border-2 border-slate-900">
+                    <div class="skew-x-[10deg]">ORDER VIA VGEN</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 px-6 bg-white relative">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-12 items-center">
+            <div class="w-full md:w-1/2 relative" data-aos="fade-right">
+                <div class="absolute inset-0 bg-pink-500 translate-x-4 translate-y-4 -z-10"></div>
+                <img src="assets/jumbotron.jpg"
+                    alt="Artist Avatar"
+                    class="w-full h-[500px] object-cover grayscale hover:grayscale-0 transition duration-500 border-4 border-slate-900">
+                <div
+                    class="absolute -bottom-6 -left-6 bg-slate-900 text-white px-6 py-4 font-jp font-bold text-xl skew-x-[-10deg]">
+                    <div class="skew-x-[10deg]">私について</div>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2" data-aos="fade-left">
+                <h2 class="text-5xl font-black mb-6 uppercase">The Artist</h2>
+                <div class="w-20 h-2 bg-pink-500 mb-8"></div>
+                <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                    Halo! Saya <strong>Ayasylfiette</strong>, seorang Digital Artist yang mengkhususkan diri dalam gaya
+                    ilustrasi anime, desain karakter, dan rigging VTuber.
+                </p>
+                <p class="text-lg text-slate-600 leading-relaxed mb-8">
+                    Dengan dedikasi tinggi pada detail dan kualitas, saya siap membantu menghidupkan persona digital
+                    kamu. Baik itu untuk keperluan personal, streaming, atau hadiah.
+                </p>
+                <a href="#contact"
+                    class="text-pink-500 font-bold hover:underline underline-offset-8 decoration-2 flex items-center gap-2">
+                    Let's collaborate! <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-slate-900 text-white px-6 border-y-4 border-pink-500 relative overflow-hidden">
+        <div
+            class="absolute right-0 top-0 opacity-10 text-[10rem] font-jp font-black leading-none pointer-events-none translate-x-1/4 -translate-y-1/4">
+            規約</div>
+
+        <div class="max-w-5xl mx-auto" data-aos="zoom-in">
+            <div class="flex items-center gap-4 mb-8">
+                <i class="fa-solid fa-triangle-exclamation text-4xl text-pink-500"></i>
+                <h2 class="text-3xl font-black uppercase">Terms & Conditions (T&C)</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6 font-medium">
+                <div class="bg-white/10 p-6 border-l-4 border-pink-500 backdrop-blur-sm hover:bg-white/20 transition">
+                    <i class="fa-solid fa-clock mb-3 text-pink-400 text-2xl"></i>
+                    <h3 class="text-xl font-bold mb-2">Waktu Pengerjaan</h3>
+                    <ul class="list-disc list-inside text-slate-300 space-y-1">
+                        <li>Ilustrasi & PNG Tuber: <span class="text-white font-bold">1-2 Minggu</span></li>
+                        <li>Live2D Asset/Rigging: <span class="text-white font-bold">1 Minggu - 2 Bulan</span></li>
+                    </ul>
+                </div>
+                <div class="bg-white/10 p-6 border-l-4 border-pink-500 backdrop-blur-sm hover:bg-white/20 transition">
+                    <i class="fa-solid fa-bolt mb-3 text-pink-400 text-2xl"></i>
+                    <h3 class="text-xl font-bold mb-2">Prioritas & File</h3>
+                    <ul class="list-disc list-inside text-slate-300 space-y-1">
+                        <li>Skip Antrian (Priority): <span class="text-white font-bold">+50% dari harga</span></li>
+                        <li>Format Akhir: <span class="text-white font-bold">PNG, JPG, PSD</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="product" class="py-24 px-6 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-down">
+                <p class="font-jp text-pink-500 font-bold tracking-widest mb-2">サービス</p>
+                <h2 class="text-5xl font-black uppercase">Commission Services</h2>
+                <div class="w-24 h-2 bg-slate-900 mx-auto mt-6"></div>
+            </div>
+
+            <div id="product-container" class="grid md:grid-cols-3 gap-8">
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-24 px-6 bg-slate-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-end mb-12" data-aos="fade-right">
+                <div>
+                    <h2 class="text-5xl font-black uppercase mb-2">Art Gallery</h2>
+                    <p class="font-jp text-slate-500 font-bold">ギャラリー</p>
+                </div>
+            </div>
+            <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+                <div class="break-inside-avoid relative group" data-aos="zoom-in" data-aos-delay="0">
+                    <img src="https://images.unsplash.com/photo-1541562232579-512a21360020?auto=format&fit=crop&q=80&w=800"
+                        class="w-full object-cover border-2 border-slate-900" alt="Art 1">
+                    <div
+                        class="absolute inset-0 bg-pink-500/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+                        <span
+                            class="text-white font-black text-2xl uppercase border-2 border-white p-2">Illustration</span>
+                    </div>
+                </div>
+                <div class="break-inside-avoid relative group" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1580136608260-4eb11f4b24fe?auto=format&fit=crop&q=80&w=800"
+                        class="w-full object-cover border-2 border-slate-900" alt="Art 2">
+                </div>
+                <div class="break-inside-avoid relative group" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1614729939124-032f0b56c9ce?auto=format&fit=crop&q=80&w=800"
+                        class="w-full object-cover border-2 border-slate-900" alt="Art 3">
+                </div>
+                <div class="break-inside-avoid relative group" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1558865869-c93f6f8482af?auto=format&fit=crop&q=80&w=800"
+                        class="w-full object-cover border-2 border-slate-900" alt="Art 4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-24 px-6 bg-white">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
+            <div data-aos="fade-right">
+                <h2 class="text-4xl font-black uppercase mb-8"><span class="text-pink-500">How to</span> Order</h2>
+                <div class="relative border-l-4 border-slate-200 ml-4 space-y-8">
+                    <div class="relative pl-8">
+                        <div
+                            class="absolute w-8 h-8 bg-pink-500 rounded-full -left-[18px] top-0 flex items-center justify-center text-white font-bold border-4 border-white">
+                            1</div>
+                        <h4 class="text-xl font-bold mb-2">Pilih Jasa & Hubungi</h4>
+                        <p class="text-slate-600">Cek daftar harga di bagian Product. Hubungi via Form / Email / VGen
+                            untuk diskusi konsep dan referensi gambar.</p>
+                    </div>
+                    <div class="relative pl-8">
+                        <div
+                            class="absolute w-8 h-8 bg-slate-900 rounded-full -left-[18px] top-0 flex items-center justify-center text-white font-bold border-4 border-white">
+                            2</div>
+                        <h4 class="text-xl font-bold mb-2">Sketsa & Pembayaran</h4>
+                        <p class="text-slate-600">Saya akan memberikan sketsa kasar. Jika setuju, lakukan pembayaran
+                            penuh atau DP 50% untuk mulai proses pengerjaan (Lineart & Base Color).</p>
+                    </div>
+                    <div class="relative pl-8">
+                        <div
+                            class="absolute w-8 h-8 bg-slate-900 rounded-full -left-[18px] top-0 flex items-center justify-center text-white font-bold border-4 border-white">
+                            3</div>
+                        <h4 class="text-xl font-bold mb-2">Revisi & Finalisasi</h4>
+                        <p class="text-slate-600">Revisi minor diperbolehkan pada tahap base color. Setelah rendering
+                            selesai, file High-Res (PNG/JPG/PSD) akan dikirimkan.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div data-aos="fade-left">
+                <h2 class="text-4xl font-black uppercase mb-8">FAQ <span
+                        class="font-jp text-pink-500 text-2xl">よくある質問</span></h2>
+                <div class="space-y-4">
+                    <div
+                        class="border-2 border-slate-200 p-4 hover:border-pink-500 transition group cursor-pointer bg-slate-50">
+                        <h4 class="font-bold flex justify-between items-center text-lg">
+                            Apakah boleh revisi pose?
+                            <i class="fa-solid fa-plus text-pink-500"></i>
+                        </h4>
+                        <p
+                            class="mt-4 text-slate-600 text-sm hidden group-hover:block border-t-2 border-slate-200 pt-4">
+                            Revisi pose hanya diperbolehkan pada tahap SKETSA KASAR. Jika sudah masuk tahap lineart atau
+                            pewarnaan, akan dikenakan biaya tambahan.
+                        </p>
+                    </div>
+                    <div
+                        class="border-2 border-slate-200 p-4 hover:border-pink-500 transition group cursor-pointer bg-slate-50">
+                        <h4 class="font-bold flex justify-between items-center text-lg">
+                            Bisa gambar Mecha atau Armor rumit?
+                            <i class="fa-solid fa-plus text-pink-500"></i>
+                        </h4>
+                        <p
+                            class="mt-4 text-slate-600 text-sm hidden group-hover:block border-t-2 border-slate-200 pt-4">
+                            Untuk saat ini fokus utama saya adalah Anime style, VTuber, dan Furry. Armor rumit/Mecha
+                            full body mungkin akan saya tolak atau dikenakan charge besar tergantung tingkat kesulitan.
+                        </p>
+                    </div>
+                    <div
+                        class="border-2 border-slate-200 p-4 hover:border-pink-500 transition group cursor-pointer bg-slate-50">
+                        <h4 class="font-bold flex justify-between items-center text-lg">
+                            Metode pembayaran apa saja?
+                            <i class="fa-solid fa-plus text-pink-500"></i>
+                        </h4>
+                        <p
+                            class="mt-4 text-slate-600 text-sm hidden group-hover:block border-t-2 border-slate-200 pt-4">
+                            Menerima Bank Transfer lokal (BCA/Mandiri), E-Wallet (Gopay/OVO/Dana), dan pembayaran via
+                            platform VGen untuk client internasional.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-pink-500 text-white parallax-bg relative"
+        style="background-image: linear-gradient(rgba(244, 114, 182, 0.9), rgba(244, 114, 182, 0.9)), url('https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&q=80&w=1920');">
+        <div class="max-w-6xl mx-auto px-6 text-center z-10 relative">
+            <h2 class="text-4xl font-black uppercase mb-12">Client Feedback</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white text-slate-800 p-8 border-4 border-slate-900 skew-y-[-2deg]" data-aos="flip-left"
+                    data-aos-delay="0">
+                    <div class="text-pink-500 text-3xl mb-4"><i class="fa-solid fa-quote-left"></i></div>
+                    <p class="font-medium mb-6">"Pengerjaan VTuber modelnya rapi banget! Parting PSD-nya mudah
+                        dimengerti riggerku. Thank you Ayasylfiette!"</p>
+                    <div class="font-black uppercase">— Kanna (VTuber)</div>
+                </div>
+                <div class="bg-slate-900 text-white p-8 border-4 border-white skew-y-[2deg]" data-aos="flip-up"
+                    data-aos-delay="100">
+                    <div class="text-pink-500 text-3xl mb-4"><i class="fa-solid fa-quote-left"></i></div>
+                    <p class="font-medium mb-6">"Furry commish pertama saya, dan hasilnya sangat memuaskan. Warnanya
+                        vibrant dan sesuai referensi."</p>
+                    <div class="font-black uppercase text-pink-400">— Alex D.</div>
+                </div>
+                <div class="bg-white text-slate-800 p-8 border-4 border-slate-900 skew-y-[-2deg]" data-aos="flip-right"
+                    data-aos-delay="200">
+                    <div class="text-pink-500 text-3xl mb-4"><i class="fa-solid fa-quote-left"></i></div>
+                    <p class="font-medium mb-6">"Fast response, revisi cepat ditangani, dan hasilnya melebihi ekspektasi
+                        harga. Will order again!"</p>
+                    <div class="font-black uppercase">— Rere Chan</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 px-6 bg-slate-50">
+        <div class="max-w-4xl mx-auto bg-white p-2 border-4 border-slate-900" data-aos="zoom-in">
+            <div class="border-2 border-dashed border-slate-300 p-8 md:p-12 text-center bg-grid">
+                <h2 class="text-4xl font-black uppercase mb-4">Start Your Commission</h2>
+                <p class="text-slate-600 mb-8 font-medium">Isi form di bawah ini dan saya akan membalas secepatnya via
+                    Email!</p>
+
+                <form id="contactForm" class="space-y-6 max-w-2xl mx-auto text-left">
+                    <div>
+                        <label class="block font-bold uppercase mb-2 text-sm">Nama/Nickname <span
+                                class="text-pink-500">*</span></label>
+                        <input type="text" id="senderName" required
+                            class="w-full p-4 bg-slate-100 border-2 border-transparent focus:border-pink-500 outline-none font-medium transition">
+                    </div>
+                    <div>
+                        <label class="block font-bold uppercase mb-2 text-sm">Tipe Jasa <span
+                                class="text-pink-500">*</span></label>
+                        <select id="senderService"
+                            class="w-full p-4 bg-slate-100 border-2 border-transparent focus:border-pink-500 outline-none font-medium transition">
+                            <option value="Illustration">Digital Illustration</option>
+                            <option value="VTuber">VTuber Asset / Live2D</option>
+                            <option value="Furry">Furry Commission</option>
+                            <option value="Other">Lainnya / Tanya Dulu</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block font-bold uppercase mb-2 text-sm">Deskripsi Ide/Konsep <span
+                                class="text-pink-500">*</span></label>
+                        <textarea id="senderMessage" rows="5" required
+                            placeholder="Jelaskan pose, warna baju, karakter, dll..."
+                            class="w-full p-4 bg-slate-100 border-2 border-transparent focus:border-pink-500 outline-none font-medium transition resize-none"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full py-5 bg-slate-900 text-white font-black text-xl uppercase tracking-widest hover:bg-pink-500 transition-colors shadow-[8px_8px_0px_rgba(0,0,0,0.1)]">
+                        KIRIM PESAN <i class="fa-solid fa-paper-plane ml-2"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 pt-16 pb-8 px-6 text-slate-300 border-t-8 border-pink-500 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 mb-12 relative z-10">
+            <div>
+                <a href="#" class="text-3xl font-black tracking-tighter text-white mb-4 block">
+                    <span class="text-pink-500">A</span>YASYLFIETTE.
+                </a>
+                <p class="text-sm font-medium mb-6 max-w-xs">Digital artist specializing in anime illustrations, VTuber
+                    models, and furry art.</p>
+                <div class="flex space-x-4">
+                    <a href="https://www.instagram.com/ayasylfiette/" target="_blank"
+                        class="w-10 h-10 bg-slate-800 flex items-center justify-center rounded hover:bg-pink-500 hover:text-white transition text-xl"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@aya.sylfiette?_r=1&_t=ZS-92M5BwmOAZo" target="_blank"
+                        class="w-10 h-10 bg-slate-800 flex items-center justify-center rounded hover:bg-pink-500 hover:text-white transition text-xl"><i
+                            class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://www.youtube.com/@AyaSylfiette" target="_blank"
+                        class="w-10 h-10 bg-slate-800 flex items-center justify-center rounded hover:bg-pink-500 hover:text-white transition text-xl"><i
+                            class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-widest mb-4">Quick Links</h4>
+                <ul class="space-y-2 text-sm font-medium">
+                    <li><a href="#home" class="hover:text-pink-400 transition"><i
+                                class="fa-solid fa-angle-right text-pink-500 mr-2"></i>Home</a></li>
+                    <li><a href="#product" class="hover:text-pink-400 transition"><i
+                                class="fa-solid fa-angle-right text-pink-500 mr-2"></i>Commission List</a></li>
+                    <li><a href="#gallery" class="hover:text-pink-400 transition"><i
+                                class="fa-solid fa-angle-right text-pink-500 mr-2"></i>Portfolio</a></li>
+                    <li><a href="https://vgen.co/AYA030" target="_blank" class="hover:text-pink-400 transition"><i
+                                class="fa-solid fa-angle-right text-pink-500 mr-2"></i>VGen Store</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-widest mb-4">Contact</h4>
+                <ul class="space-y-3 text-sm font-medium">
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-envelope mt-1 text-pink-500"></i>
+                        <span>ayasylfiette@gmail.com</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-location-dot mt-1 text-pink-500"></i>
+                        <span>Depok, West Java, Indonesia</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div
+            class="max-w-7xl mx-auto border-t border-slate-800 pt-8 text-center text-sm font-medium flex flex-col md:flex-row justify-between items-center z-10 relative">
+            <p>&copy; 2026 Ayasylfiette Studio. All Rights Reserved.</p>
+            <p class="font-jp mt-2 md:mt-0">ありがとうございます</p>
+        </div>
+
+        <div
+            class="absolute bottom-[-20%] left-0 text-[15rem] font-black text-slate-800/50 pointer-events-none select-none font-jp uppercase whitespace-nowrap overflow-hidden w-full">
+            AYASYLFIETTE
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+
+</html>
