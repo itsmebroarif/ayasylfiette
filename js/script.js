@@ -4,7 +4,7 @@ const productData = [
         id: "p1",
         category: "Illustration",
         title: "Anime Illustration",
-        price: "Start from Rp 150.000",
+        price: "Start from $13",
         features: ["Full Color", "Simple Background", "1 Character", "Bust up / Halfbody / Fullbody"],
         image: "../assets/images/anime_ilustrasi/2.png",
         delay: 0
@@ -13,7 +13,7 @@ const productData = [
         id: "p2",
         category: "VTuber",
         title: "Live2D Model & Rigging",
-        price: "Start from Rp 800.000",
+        price: "Start from $55",
         features: ["Ready to Rig PSD", "XYZ Head & Body", "Physics (Hair, Clothes)", "Basic Expressions"],
         image: "../assets/images/l2d/IMG_0890.PNG",
         delay: 100
@@ -22,7 +22,7 @@ const productData = [
         id: "p3",
         category: "Furry",
         title: "Furry Commission",
-        price: "Start from Rp 200.000",
+        price: "Start from $15",
         features: ["Anthro / Feral", "Vibrant Coloring", "Custom Species", "Reference Sheet Available"],
         image: "../assets/images/Furry/IMG_0892.PNG",
         delay: 200
