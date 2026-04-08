@@ -18,7 +18,7 @@ const productData = [
         image: "../assets/images/l2d/IMG_0890.PNG",
         delay: 100
     },
-    {
+    { 
         id: "p3",
         category: "Furry",
         title: "Furry Commission",
