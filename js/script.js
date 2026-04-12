@@ -13,7 +13,7 @@ const productData = [
         id: "p2",
         category: "VTuber",
         title: "Live2D Model & Rigging",
-        price: "Start from $400",
+        price: "Start from $150",
         features: ["Ready to Rig PSD", "XYZ Head & Body", "Physics (Hair, Clothes)", "Basic Expressions"],
         image: "../assets/images/l2d/IMG_0890.PNG",
         delay: 100
